@@ -4,10 +4,19 @@
   padding: 0;
 }
 
+:root{
+  --backColor: #111213 ;
+  --btnAfter: #FFBE0B;
+  --btnLast: #c59511;
+  --fontColor: #FFBE0B;
+  --backInput: #22262b;
+  --lineFomr: #FFBE0B;
+}
+
 body {
   height: 100vh;
   font-family: sans-serif;
-  background-color: azure;
+  background-color: var(--backColor);
 }
 
 .container {
@@ -26,30 +35,34 @@ body {
   flex-direction: column;
   text-align: center;
   position: absolute;
-  border: 3px solid rgb(44, 73, 63);
+  border: 1px solid var(--lineFomr);
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 label {
   text-align: left;
   margin-left: 10px;
   font-size: 20px;
+  color: var(--fontColor)
 }
+
 .form input {
   width: 95%;
   height: 60px;
   font-size: 20px;
   margin: 10px;
   padding: 10px;
-  background-color: rgba(128, 128, 128, 0.262);
+  background-color: var(--backInput);
   border: none;
+  color: white;
 }
+
 .form span {
   font-size: 14px;
   color: red;
   text-align: center;
-  font-weight: bold;
+  font-weight: 200;
 }
 
 .form .seletor {
@@ -58,10 +71,11 @@ label {
   font-size: 20px;
   margin: 10px;
   padding: 6px;
-  background-color: rgba(128, 128, 128, 0.262);
+  background-color: var(--backInput);
   font-weight: bold;
   cursor: pointer;
   border: none;
+  color: white;
 }
 
 .form .btn {
@@ -70,15 +84,16 @@ label {
   font-size: 20px;
   margin: 10px;
   padding: 6px;
-  background-color: rgb(136, 165, 155);
+  background-color: var(--btnLast);
   border: none;
   font-weight: bold;
   transition: all 0.3s;
   cursor: pointer;
+  color: var(--backInput);
 }
 .form .btn:hover {
-  background-color: rgb(44, 73, 63);
-  color: white;
+  background-color: var(--btnAfter);
+  color: var(--backColor);
 }
 
 textarea {
@@ -87,9 +102,11 @@ textarea {
   min-height: 200px;
   max-height: 200px;
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 200;
   margin: 10px;
   padding: 10px;
   margin-bottom: 20px;
   border: none;
+  background-color: var(--backInput);
+  color: white;
 }
